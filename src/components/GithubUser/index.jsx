@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Card, Input } from "./styles";
+import { Card, Input, Container, SearchButton } from "./styles";
 
 export const GithubUser = () => {
   const [username, setUsername] = useState("");
@@ -34,7 +34,7 @@ export const GithubUser = () => {
   };
 
   return (
-    <div>
+    <Container>
       <Input
         type="text"
         placeholder="Digite o nome de usuário do GitHub"
@@ -42,6 +42,7 @@ export const GithubUser = () => {
         onChange={handleInputChange}
         onKeyPress={handleKeyPress}
       />
+      <SearchButton onClick={buscarUsuarios}>Buscar</SearchButton>
       {userData && (
         <Card>
           <img src={userData.avatar_url} alt="Avatar" />
@@ -61,6 +62,6 @@ export const GithubUser = () => {
           </div>
         </Card>
       )}
-    </div>
+    </Container>
   );
 };
