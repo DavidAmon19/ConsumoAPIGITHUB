@@ -1,3 +1,5 @@
+
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -29,6 +31,9 @@ body {
   min-width: 320px;
   min-height: 100vh;
   justify-content: center; 
+  background-image: url("https://wallpapercave.com/wp/wp1904622.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 h1 {

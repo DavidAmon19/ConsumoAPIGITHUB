@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
-const corPrincipal = '#FF4D4D';    // Vermelho mais vibrante
-const corHover = '#FF3333';        // Cor para o estado de hover mais intensa
-const corBorda = '#E06666';        // Cor da borda
-const corTexto = '#ffffff';        // Cor do texto
-const corFundoCard = '#2f0909';    // Cor de fundo do card
+const corPrincipal = '#F64348';    // Vermelho mais vibrante
+const corHover = '#F64348';        // Cor para o estado de hover mais intensa
+const corBorda = '#F64348';        // Cor da borda
+const corTexto = '#1E1E1E';        // Cor do texto
+const corFundoCard = '#1E1E1E';    // Cor de fundo do card
+const corTextInter = '#FFFF';
 
 export const SearchButton = styled.button`
   border-radius: 8px;
@@ -14,7 +15,7 @@ export const SearchButton = styled.button`
   font-weight: 500;
   font-family: inherit;
   background-color: ${corPrincipal};
-  color: #ffffff;
+  color: ${corTextInter};
   cursor: pointer;
   transition: background-color 0.25s, color 0.25s, border-color 0.25s;
 
@@ -32,7 +33,7 @@ export const Container = styled.div`
 `;
 
 export const Card = styled.div`
-  border: 2px solid ${corBorda};
+  border: 5px solid ${corBorda};
   border-radius: 5px;
   padding: 20px;
   margin-top: 20px;
@@ -70,4 +71,8 @@ export const Input = styled.input`
   font-size: 1.1rem;
   color: ${corTexto};
   margin: 10px;
+`;
+
+export const ErrorMessage = styled.div`
+
 `;
