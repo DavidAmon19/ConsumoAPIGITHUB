@@ -37,6 +37,16 @@ export const Card = styled.div`
   padding: 20px;
   margin-top: 20px;
   background-color: ${corFundoCard};
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  img {
+    border-radius: 50%;
+    width: 250px; 
+    height: 250px; 
+    border: 2px solid ${corBorda};
+  }
 `;
 
 export const Input = styled.input`
