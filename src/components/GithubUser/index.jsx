@@ -50,7 +50,7 @@ export const GithubUser = () => {
           <p>Cidade: {userData.location}</p>
           <p>Seguidores: {userData.followers}</p>
           <p>Seguindo: {userData.following}</p>
-          <h3>Repositórios:</h3>
+          <h3>Melhores Repositórios:</h3>
           <div>
             {userData.repos && (
               <ul>

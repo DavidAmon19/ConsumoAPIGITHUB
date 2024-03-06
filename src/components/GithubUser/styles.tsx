@@ -4,7 +4,7 @@ const corPrincipal = '#FF4D4D';    // Vermelho mais vibrante
 const corHover = '#FF3333';        // Cor para o estado de hover mais intensa
 const corBorda = '#E06666';        // Cor da borda
 const corTexto = '#ffffff';        // Cor do texto
-const corFundoCard = '#242424';    // Cor de fundo do card
+const corFundoCard = '#2f0909';    // Cor de fundo do card
 
 export const SearchButton = styled.button`
   border-radius: 8px;
@@ -46,6 +46,18 @@ export const Card = styled.div`
     width: 250px; 
     height: 250px; 
     border: 2px solid ${corBorda};
+  }
+
+  h2 {
+    color: ${corBorda};
+  }
+
+  P {
+    color: ${corPrincipal};
+  }
+
+  h3 {
+    color: ${corHover};
   }
 `;
 
