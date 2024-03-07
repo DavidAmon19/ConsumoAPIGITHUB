@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Card, Input, Container, SearchButton, ErrorMessage } from "./styles";
+import { Card, Input, Container, SearchButton } from "./styles";
 import { useNavigate } from "react-router-dom";
 
 export const GithubUser = () => {
   const [username, setUsername] = useState("");
   const [userData, setUserData] = useState(null);
   const [userNotFound, setUserNotFound] = useState(false);
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const buscarUsuarios = async () => {
     try {
@@ -40,9 +40,11 @@ export const GithubUser = () => {
 
   const handleSeeRepositories = () => {
     if (userData) {
-      navigate(`/repositories/${username}`); 
+      navigate(`/repositories/${username}`);
     }
   };
+
+ 
 
   return (
     <Container>
@@ -64,7 +66,7 @@ export const GithubUser = () => {
             <p>Seguidores: {userData.followers}</p>
             <p>Seguindo: {userData.following}</p>
             <h3>Melhores Repositórios:</h3>
-            <div>
+            {/* <div>
               {userData.repos && (
                 <ul>
                   {userData.repos.map((repo, index) => (
@@ -72,7 +74,7 @@ export const GithubUser = () => {
                   ))}
                 </ul>
               )}
-            </div>
+            </div> */}
           </Card>
           <SearchButton onClick={handleSeeRepositories}>
             Ver Repositórios
