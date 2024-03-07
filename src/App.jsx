@@ -1,12 +1,16 @@
-import {GithubUser} from "./components/GithubUser/index"
-
-
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { GithubUser } from "./components/GithubUser";
+import { RepositoryPage } from "./components/RepositoryPage";
 
 function App() {
   return (
-    <div className="App">
-      <GithubUser />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/" element={<GithubUser />} />
+        <Route path="/repositories/:username" element={<RepositoryPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
