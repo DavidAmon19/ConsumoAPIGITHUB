@@ -71,3 +71,11 @@ export const Input = styled.input`
   color: ${corFundoCard};
   margin: 10px;
 `;
+
+export const ErrorMessage = styled.div`
+  width: 50vw;
+  height: 50vh
+
+  margin: 1rem auto;
+  border: 2px solid ${corBorda};
+`;
