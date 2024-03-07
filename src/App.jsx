@@ -5,12 +5,14 @@ import { RepositoryPage } from "./components/RepositoryPage";
 
 function App() {
   return (
+    
     <BrowserRouter>
       <Routes>
         <Route exact path="/" element={<GithubUser />} />
         <Route path="/repositories/:username" element={<RepositoryPage />} />
       </Routes>
     </BrowserRouter>
+  
   );
 }
 
