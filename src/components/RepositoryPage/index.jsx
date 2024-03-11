@@ -9,6 +9,8 @@ const PageContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 12px;
+    color: #FFF;
+  
 `;
 
 const Avatar = styled.img`
