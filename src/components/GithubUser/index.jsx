@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Card, Input, Container, SearchButton } from "./styles";
+import { Card, Input, Container, SearchButton, GithubIcon } from "./styles"; 
 import { useNavigate } from "react-router-dom";
+import { ErrorMessage } from "./styles";
 
 export const GithubUser = () => {
   const [username, setUsername] = useState("");
@@ -23,7 +24,7 @@ export const GithubUser = () => {
         repos: reposResponse.data,
       }));
     } catch (error) {
-      console.log(`Erro ao chamar comando: ${error.message}`);
+      console.error(`Erro ao chamar comando: ${error.message}`);
       setUserNotFound(true);
     }
   };
@@ -44,19 +45,25 @@ export const GithubUser = () => {
     }
   };
 
- 
-
   return (
     <Container>
-      <Input
-        type="text"
-        placeholder="Usuário do GitHub"
-        value={username}
-        onChange={handleInputChange}
-        onKeyPress={handleKeyPress}
-      />
+      <div>
+        <GithubIcon src="src/assets/icon-gityellow3.png" alt="GitHub" />
+        <Input
+          type="text"
+          placeholder="Usuário do GitHub"
+          value={username}
+          onChange={handleInputChange}
+          onKeyPress={handleKeyPress}
+        />
+      </div>
       <SearchButton onClick={buscarUsuarios}>Buscar</SearchButton>
-      {userNotFound && <ErrorMessage>Usuário não encontrado</ErrorMessage>}
+      {userNotFound && (
+        <ErrorMessage>
+          <img src="/src/assets/erro-de-pagina2.jpg" alt="Erro" />
+          Usuário não encontrado
+        </ErrorMessage>
+      )}
       {userData && !userNotFound && (
         <>
           <Card>
@@ -66,15 +73,6 @@ export const GithubUser = () => {
             <p>Seguidores: {userData.followers}</p>
             <p>Seguindo: {userData.following}</p>
             <h3>Melhores Repositórios:</h3>
-            {/* <div>
-              {userData.repos && (
-                <ul>
-                  {userData.repos.map((repo, index) => (
-                    <li key={index}>{repo.name}</li>
-                  ))}
-                </ul>
-              )}
-            </div> */}
           </Card>
           <SearchButton onClick={handleSeeRepositories}>
             Ver Repositórios
