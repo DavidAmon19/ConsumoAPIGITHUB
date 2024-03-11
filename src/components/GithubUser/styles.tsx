@@ -86,16 +86,24 @@ export const Input = styled.input`
 `;
 
 export const ErrorMessage = styled.div`
+
+  width: 50vw;
+  height: 50vh
+
+  margin: 1rem auto;
+  border: 2px solid ${corBorda};
+
   color: ${corBorda};
   display: flex;
   align-items: center;
 
-  img {
-    width: 200px; 
-    height: 200px; 
-    margin-right: 5px;
-  }
+  
 `;
 
+// img {
+//   width: 200px; 
+//   height: 200px; 
+//   margin-right: 5px;
+// }
 
 
