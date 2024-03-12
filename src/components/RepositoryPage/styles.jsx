@@ -15,6 +15,7 @@ export const Avatar = styled.img`
     border-radius: 50%;
     margin-bottom: 5px;
     border: 2px solid #e5f01084;
+    border-radius: 5PX;
 `;
 
 export const Title = styled.h1`
@@ -22,11 +23,13 @@ export const Title = styled.h1`
     padding: 8px;
     margin-bottom: 8px;
     font-size: 20px;
+    border-radius: 5PX;
 `;
 
 export const RepositoriesList = styled.div`
     background-color: #e5f01084;
     padding: 15px;
+    border-radius: 5PX;
 
     h2 {
     font-size: 18px;
