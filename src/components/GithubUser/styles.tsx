@@ -88,7 +88,7 @@ export const Input = styled.input`
 export const ErrorMessage = styled.div`
 
   width: 50vw;
-  height: 50vh
+  height: 50vh;
 
   margin: 1rem auto;
   border: 2px solid ${corBorda};
