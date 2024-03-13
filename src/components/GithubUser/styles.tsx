@@ -4,8 +4,8 @@ const corPrincipal = '#6C63FF';    // Azul vibrante
 const corHover = '#4F46E5';        // Tom mais escuro de azul para hover
 const corBorda = '#433DB9';        // Cor da borda mais escura
 const corTexto = '#2C2C2C';        // Cor do texto mais escura
-const corFundoCard = '#F0F2F5';    // Cor de fundo do card mais suave
-const corFundoserch = '#e5f01084';    // Cor de fundo do serch
+const corFundoCard = '#FFFF';    // Cor de fundo do card mais suave
+const corFundoserch = '#FFFF';    // Cor de fundo do serch
 
 export const SearchButton = styled.button`
   border-radius: 8px;
