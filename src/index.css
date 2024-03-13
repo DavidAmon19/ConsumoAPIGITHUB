@@ -15,10 +15,23 @@ body {
   display: flex;
   place-items: center;
   justify-content: center;
-  background-image: url("./assets/github-img.jpg");
-  background-size: cover; 
-  background-position: center;
-  background-repeat: no-repeat;
+  background: linear-gradient(45deg, #1F2544, #474F7A, #81689D, #FFD0EC);
+  background-size: 200% 200%;
   padding: 2rem;
   height: 100vh;
+  animation: colors 10s ease infinite;
+}
+
+@keyframes colors {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }

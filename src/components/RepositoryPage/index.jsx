@@ -1,8 +1,9 @@
 // RepositoryPage.jsx
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useParams, Link } from "react-router-dom";
-import {PageContainer,  Avatar , Title, RepositoriesList, BackButton, } from "./styles";
+import { useParams } from "react-router-dom";
+import { PageContainer, Avatar, Title, RepositoriesList, BackButton, } from "./styles";
+import RepositoryCard from "./RepositoryCard";
 
 export const RepositoryPage = () => {
   const { username } = useParams();
@@ -42,14 +43,10 @@ export const RepositoryPage = () => {
   return (
     <PageContainer>
       {userAvatar && <Avatar src={userAvatar} alt="Avatar" />}
-      <Title>Melhores repositórios:</Title>
+      <Title>Repositórios:</Title>
       <RepositoriesList>
         {repositories.map((repo) => (
-          <div key={repo.id}>
-            <h2>{repo.name}</h2>
-            <p>{repo.description}</p>
-            <p>Estrelas: {repo.stargazers_count}</p>
-          </div>
+          <RepositoryCard key={repo.id} repo={repo} /> // Renderize o componente RepositoryCard para cada item na lista de repositórios
         ))}
       </RepositoriesList>
       <BackButton to="/">Voltar para Pesquisas</BackButton>
