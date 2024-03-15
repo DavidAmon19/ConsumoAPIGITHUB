@@ -40,10 +40,7 @@ export const GithubIcon = styled.img`
   margin-bottom: -15px;
 `;
 
-
-
 export const Card = styled.div`
-  border: 2px solid ${corBorda};
   border-radius: 5px;
   padding: 20px;
   margin-top: 20px;
@@ -54,8 +51,8 @@ export const Card = styled.div`
 
   img {
     border-radius: 50%;
-    width: 220px;
-    height: 220px;
+    width: 260px;
+    height: 260px;
     border: 2px solid ${corBorda};
   }
 
@@ -72,6 +69,8 @@ export const Card = styled.div`
   }
 `;
 
+
+
 export const Input = styled.input`
   border: 2px solid ${corBorda};
   border-radius: 5px;
@@ -81,6 +80,25 @@ export const Input = styled.input`
   font-size: 1.2rem;
   color: ${corBorda};
   margin: 8px;
+
+  
+`;
+
+export const CardText = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 18px;
+gap: 1rem;
+`;
+
+export const CardSegue = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  gap: 1rem;
+  margin-top: 1rem;
 `;
 
 export const ErrorMessage = styled.div`

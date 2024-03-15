@@ -1,9 +1,10 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
 import axios from "axios";
-import { Card, Input, Container, SearchButton } from "./styles";
+import { Card, Input, Container, SearchButton, CardSegue,CardText } from "./styles";
 import { useNavigate } from "react-router-dom";
 import { ErrorMessage } from "./styles";
+import "boxicons";
 
 export const GithubUser = () => {
   const [username, setUsername] = useState("");
@@ -72,10 +73,15 @@ export const GithubUser = () => {
         <>
           <Card>
             <img src={userData.avatar_url} alt="Avatar" />
-            <h2>{userData.name}</h2>
-            <p>Cidade: {userData.location}</p>
-            <p>Seguidores: {userData.followers}</p>
-            <p>Seguindo: {userData.following}</p>
+            <h2 style={{ marginBottom: "1rem" }}>{userData.name}</h2>
+            <CardText>
+              <p>Cidade: {userData.location}</p>
+              <box-icon name="map-pin"></box-icon>
+            </CardText>
+            <CardSegue>
+              <p>Seguidores: {userData.followers}</p> <box-icon name='user-check' ></box-icon>
+              <p>Seguindo: {userData.following}</p><box-icon name='user'></box-icon>
+            </CardSegue>
           </Card>
           <SearchButton onClick={handleSeeRepositories}>
             Ver Repositórios
@@ -97,8 +103,6 @@ const footerStyle = {
   textAlign: "center",
   padding: "20px",
 };
-
-
 
 /*Condição sobre renderização , o !useData && o card para renderizar esperam na condição valores falsos
  então como funciona a logica? Se os valores de !useData && card forem falsos, ou seja não tiver dados
