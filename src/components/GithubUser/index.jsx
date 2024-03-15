@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
 import axios from "axios";
-import { Card, Input, Container, SearchButton, GithubIcon } from "./styles"; 
+import { Card, Input, Container, SearchButton } from "./styles"; 
 import { useNavigate } from "react-router-dom";
 import { ErrorMessage } from "./styles";
 
@@ -49,7 +49,7 @@ export const GithubUser = () => {
   return (
     <Container>
       <div>
-        <GithubIcon src="src/assets/icon-gityellow3.png" alt="GitHub" />
+        
         <Input
           type="text"
           placeholder="Usuário do GitHub"
@@ -73,13 +73,24 @@ export const GithubUser = () => {
             <p>Cidade: {userData.location}</p>
             <p>Seguidores: {userData.followers}</p>
             <p>Seguindo: {userData.following}</p>
-            <h3>Melhores Repositórios:</h3>
           </Card>
           <SearchButton onClick={handleSeeRepositories}>
             Ver Repositórios
           </SearchButton>
+          
         </>
       )}
+      <footer style={footerStyle}>
+        <img 
+        src="https://cdn.iconscout.com/icon/free/png-256/free-github-brand-logo-47401.png" 
+        alt="Footer Image"
+        style={{ width: '80px'}} />
+      </footer>        
     </Container>
   );
+};
+
+const footerStyle = {
+  textAlign: 'center',
+  padding: '20px'
 };

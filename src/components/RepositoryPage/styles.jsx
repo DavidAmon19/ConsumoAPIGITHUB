@@ -10,27 +10,27 @@ export const PageContainer = styled.div`
 `;
 
 export const Avatar = styled.img`
-    width: 100px;
-    height: 100px;
-    border-radius: 5%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
     margin-bottom: 5px;
-    border: 2px solid #e5f01084;
+    border: 2px solid #FFFF;
 `;
 
 export const Title = styled.h1`
-    background-color: #e5f01084;
     padding: 8px;
     margin-bottom: 8px;
-    font-size: 20px;
+    font-size: 30px;
     border-radius:5px;
 `;
 
 export const RepositoriesList = styled.div`
-    background-color: #e5f01084;
+    background-color: #B9B4C7;
     padding: 15px;
     border-radius:5px;
 
     h2 {
+    color: #352F44;  
     font-size: 18px;
     }
 
