@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
 import axios from "axios";
-import { Card, Input, Container, SearchButton } from "./styles"; 
+import { Card, Input, Container, SearchButton } from "./styles";
 import { useNavigate } from "react-router-dom";
 import { ErrorMessage } from "./styles";
 
@@ -48,17 +48,20 @@ export const GithubUser = () => {
 
   return (
     <Container>
-      <div>
-        
-        <Input
-          type="text"
-          placeholder="Usuário do GitHub"
-          value={username}
-          onChange={handleInputChange}
-          onKeyPress={handleKeyPress}
-        />
-      </div>
-      <SearchButton onClick={buscarUsuarios}>Buscar</SearchButton>
+      {!userData && (
+        <div>
+          <Input
+            type="text"
+            placeholder="Usuário do GitHub"
+            value={username}
+            onChange={handleInputChange}
+            onKeyPress={handleKeyPress}
+          />
+        </div>
+      )}
+      {!userData && (
+        <SearchButton onClick={buscarUsuarios}>Buscar</SearchButton>
+      )}
       {userNotFound && (
         <ErrorMessage>
           <img src="/src/assets/erro-de-pagina2.jpg" alt="Erro" />
@@ -77,20 +80,28 @@ export const GithubUser = () => {
           <SearchButton onClick={handleSeeRepositories}>
             Ver Repositórios
           </SearchButton>
-          
         </>
       )}
       <footer style={footerStyle}>
-        <img 
-        src="https://cdn.iconscout.com/icon/free/png-256/free-github-brand-logo-47401.png" 
-        alt="Footer Image"
-        style={{ width: '80px'}} />
-      </footer>        
+        <img
+          src="https://cdn.iconscout.com/icon/free/png-256/free-github-brand-logo-47401.png"
+          alt="Footer Image"
+          style={{ width: "80px" }}
+        />
+      </footer>
     </Container>
   );
 };
 
 const footerStyle = {
-  textAlign: 'center',
-  padding: '20px'
+  textAlign: "center",
+  padding: "20px",
 };
+
+
+
+/*Condição sobre renderização , o !useData && o card para renderizar esperam na condição valores falsos
+ então como funciona a logica? Se os valores de !useData && card forem falsos, ou seja não tiver dados
+ a pesquisa e o botão ainda serão renderizados, caso tenha dados do usuario, ou seja, venha verdadeiro a expressão
+ se tornará falsa, então a pesquisa e o botão serão retirados
+*/

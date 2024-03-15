@@ -1,11 +1,11 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-const corPrincipal = '#6C63FF';    // Azul vibrante
-const corHover = '#4F46E5';        // Tom mais escuro de azul para hover
-const corBorda = '#433DB9';        // Cor da borda mais escura
-const corTexto = '#2C2C2C';        // Cor do texto mais escura
-const corFundoCard = '#FFFF';    // Cor de fundo do card mais suave
-const corFundoserch = '#FFFF';    // Cor de fundo do serch
+const corPrincipal = "#6C63FF"; // Azul vibrante
+const corHover = "#4F46E5"; // Tom mais escuro de azul para hover
+const corBorda = "#433DB9"; // Cor da borda mais escura
+const corTexto = "#2C2C2C"; // Cor do texto mais escura
+const corFundoCard = "#FFFF"; // Cor de fundo do card mais suave
+const corFundoserch = "#FFFF"; // Cor de fundo do serch
 
 export const SearchButton = styled.button`
   border-radius: 8px;
@@ -18,7 +18,7 @@ export const SearchButton = styled.button`
   color: #ffffff;
   cursor: pointer;
   transition: background-color 0.25s, color 0.25s, border-color 0.25s;
-  margin:5px;
+  margin: 5px;
 
   &:hover {
     background-color: ${corHover};
@@ -29,16 +29,14 @@ export const SearchButton = styled.button`
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   background-color: ${corFundoserch};
-  border-radius: 5px;
-  padding: 10px;
+  border-radius: 2rem;
+  padding: 3rem;
 `;
 
 export const GithubIcon = styled.img`
-  width: 50px;  
-  height: 50px; 
+  width: 50px;
+  height: 50px;
   margin-bottom: -15px;
 `;
 
@@ -47,11 +45,12 @@ export const GithubIcon = styled.img`
 export const Card = styled.div`
   border: 2px solid ${corBorda};
   border-radius: 5px;
-  padding: 20px; 
+  padding: 20px;
   margin-top: 20px;
   background-color: ${corFundoCard};
   text-align: center;
   width: 100%;
+  margin-bottom: 2rem;
 
   img {
     border-radius: 50%;
@@ -73,7 +72,6 @@ export const Card = styled.div`
   }
 `;
 
-
 export const Input = styled.input`
   border: 2px solid ${corBorda};
   border-radius: 5px;
@@ -86,7 +84,6 @@ export const Input = styled.input`
 `;
 
 export const ErrorMessage = styled.div`
-
   width: 50vw;
   height: 50vh;
 
@@ -96,14 +93,10 @@ export const ErrorMessage = styled.div`
   color: ${corBorda};
   display: flex;
   align-items: center;
-
-  
 `;
 
 // img {
-//   width: 200px; 
-//   height: 200px; 
+//   width: 200px;
+//   height: 200px;
 //   margin-right: 5px;
 // }
-
-
