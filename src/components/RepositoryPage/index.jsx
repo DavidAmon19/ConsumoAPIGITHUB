@@ -2,7 +2,7 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import {PageContainer,  Avatar , Title, RepositoriesList, BackButton, } from "./styles";
 
 export const RepositoryPage = () => {
