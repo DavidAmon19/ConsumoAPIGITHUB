@@ -69,8 +69,6 @@ export const Card = styled.div`
   }
 `;
 
-
-
 export const Input = styled.input`
   border: 2px solid ${corBorda};
   border-radius: 5px;
@@ -80,16 +78,14 @@ export const Input = styled.input`
   font-size: 1.2rem;
   color: ${corBorda};
   margin: 8px;
-
-  
 `;
 
 export const CardText = styled.div`
-display: flex;
-justify-content: center;
-align-items: center;
-font-size: 18px;
-gap: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  gap: 1rem;
 `;
 
 export const CardSegue = styled.div`
@@ -112,6 +108,8 @@ export const ErrorMessage = styled.div`
   display: flex;
   align-items: center;
 `;
+
+
 
 // img {
 //   width: 200px;
