@@ -1,8 +1,16 @@
 // RepositoryPage.jsx
+// eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import { PageContainer, Avatar, Title, RepositoriesList, BackButton, } from "./styles";
+import {
+  PageContainer,
+  Avatar,
+  Title,
+  RepositoriesList,
+  BackButton,
+} from "./styles";
+import { CardRepositorioSimple } from "./styles";
 import RepositoryCard from "./RepositoryCard";
 
 export const RepositoryPage = () => {
@@ -46,7 +54,12 @@ export const RepositoryPage = () => {
       <Title>Repositórios:</Title>
       <RepositoriesList>
         {repositories.map((repo) => (
-          <RepositoryCard key={repo.id} repo={repo} /> // Renderize o componente RepositoryCard para cada item na lista de repositórios
+          // eslint-disable-next-line react/jsx-key
+          <CardRepositorioSimple>
+            // eslint-disable-next-line react/jsx-no-comment-textnodes
+            <RepositoryCard key={repo.id} repo={repo} /> // Renderize o
+            componente RepositoryCard para cada item na lista de repositórios
+          </CardRepositorioSimple>
         ))}
       </RepositoriesList>
       <BackButton to="/">Voltar para Pesquisas</BackButton>

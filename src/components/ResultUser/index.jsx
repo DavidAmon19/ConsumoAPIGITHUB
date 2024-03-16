@@ -2,10 +2,12 @@
 import React from "react";
 import { Card, Container, SearchButton } from "./styles";
 import { useLocation, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const ResultUser = () => {
   const { username } = useParams();
   const location = useLocation();
+  const navigate = useNavigate();
   const userData = location.state?.userData;
 
   const handleSeeRepositories = () => {
