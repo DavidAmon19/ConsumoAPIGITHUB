@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 
 const corPrincipal = '#6C63FF';    // Azul vibrante
-const corHover = '#4F46E5';        // Tom mais escuro de azul para hover
+const corHover = '#D67BFF';        // Tom mais escuro de azul para hover
 const corBorda = '#433DB9';        // Cor da borda mais escura
 const corTexto = '#2C2C2C';        // Cor do texto mais escura
 const corFundoCard = '#FFFF';    // Cor de fundo do card mais suave
-const corFundoserch = '#FFFF';    // Cor de fundo do serch
+const corFundoserch = '#FFFF';
+const corBotao = '#F1FADA';  
+const corLetra = '#27005D';
 
 export const SearchButton = styled.button`
   border-radius: 8px;
@@ -14,11 +16,11 @@ export const SearchButton = styled.button`
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: ${corPrincipal};
-  color: #ffffff;
+  background-color: ${corBotao};
+  color: ${corLetra};
   cursor: pointer;
   transition: background-color 0.25s, color 0.25s, border-color 0.25s;
-  margin:5px;
+  margin:10px;
 
   &:hover {
     background-color: ${corHover};
@@ -31,9 +33,8 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: ${corFundoserch};
   border-radius: 5px;
-  padding: 10px;
+  padding: 50px;
 `;
 
 export const GithubIcon = styled.img`
@@ -85,25 +86,7 @@ export const Input = styled.input`
   margin: 8px;
 `;
 
-export const ErrorMessage = styled.div`
 
-  width: 50vw;
-  height: 50vh;
 
-  margin: 1rem auto;
-  border: 2px solid ${corBorda};
-
-  color: ${corBorda};
-  display: flex;
-  align-items: center;
-
-  
-`;
-
-// img {
-//   width: 200px; 
-//   height: 200px; 
-//   margin-right: 5px;
-// }
 
 
