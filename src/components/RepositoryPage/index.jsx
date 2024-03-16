@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import {
   PageContainer,
   Avatar,
@@ -8,7 +8,6 @@ import {
   RepositoriesList,
   BackButton,
 } from "./styles";
-import { CardRepositorioSimple } from "./styles";
 import RepositoryCard from "./RepositoryCard";
 
 export const RepositoryPage = () => {
@@ -53,7 +52,15 @@ export const RepositoryPage = () => {
         <Title>Repositórios:</Title>
         <RepositoriesList>
           {repositories.map((repo) => (
-            <RepositoryCard key={repo.id} repo={repo}  />
+            <Link
+              key={repo.id}
+              to={`https://github.com/${username}/${repo.name}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <RepositoryCard repo={repo} />
+            </Link>
           ))}
         </RepositoriesList>
         <BackButton to="/">Voltar para Pesquisas</BackButton>
