@@ -13,24 +13,31 @@ export const Home = () => {
 
   const buscarUsuarios = async () => {
     try {
-      const response = await axios.get(
-        `https://api.github.com/users/${username}`
-      );
+      const token = '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';
+  
+      const config = {
+        headers: {
+          Authorization: `token ${token}`
+        }
+      };
+  
+
+      const response = await axios.get(`https://api.github.com/users/${username}`, config);
       setUserData(response.data);
       setUserNotFound(false);
+  
 
-      const reposResponse = await axios.get(response.data.repos_url);
+      const reposResponse = await axios.get(response.data.repos_url, config);
       setUserRepos(reposResponse.data);
+  
 
-      navigate(`/usuario/${username}`, {
-        state: { userData: response.data, userRepos: reposResponse.data },
-      });
+      navigate(`/usuario/${username}`, { state: { userData: response.data, userRepos: reposResponse.data } });
     } catch (error) {
       console.error(`Erro ao chamar comando: ${error.message}`);
       setUserNotFound(true);
     }
   };
-
+  
   const handleInputChange = (event) => {
     setUsername(event.target.value);
   };

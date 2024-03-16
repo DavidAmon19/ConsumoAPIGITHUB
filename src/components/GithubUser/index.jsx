@@ -5,6 +5,7 @@ import { Card, Input, Container, SearchButton, CardSegue,CardText } from "./styl
 import { useNavigate } from "react-router-dom";
 import { ErrorMessage } from "./styles";
 import "boxicons";
+import { NotFound } from "../NotFound";
 
 export const GithubUser = () => {
   const [username, setUsername] = useState("");
@@ -66,7 +67,7 @@ export const GithubUser = () => {
       {userNotFound && (
         <ErrorMessage>
           <img src="/src/assets/erro-de-pagina2.jpg" alt="Erro" />
-          Usuário não encontrado
+          <NotFound />
         </ErrorMessage>
       )}
       {userData && !userNotFound && (
