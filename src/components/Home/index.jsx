@@ -22,8 +22,9 @@ export const Home = () => {
       const reposResponse = await axios.get(response.data.repos_url);
       setUserRepos(reposResponse.data);
 
-      // Redireciona para a página do usuário localizado
-      navigate(`/usuario/${username}`, { state: { userData: response.data, userRepos: reposResponse.data } });
+      navigate(`/usuario/${username}`, {
+        state: { userData: response.data, userRepos: reposResponse.data },
+      });
     } catch (error) {
       console.error(`Erro ao chamar comando: ${error.message}`);
       setUserNotFound(true);

@@ -10,7 +10,7 @@ const corFundoserch = '#FFFF';    // Cor de fundo do serch
 export const SearchButton = styled.button`
   border-radius: 8px;
   border: 1px solid ${corPrincipal};
-  padding: 0.5em 1.2em;
+  padding: 1em 5em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
@@ -33,7 +33,7 @@ export const Container = styled.div`
   justify-content: center;
   background-color: ${corFundoserch};
   border-radius: 5px;
-  padding: 10px;
+  padding: 5rem;
 `;
 
 export const GithubIcon = styled.img`
@@ -77,12 +77,11 @@ export const Card = styled.div`
 export const Input = styled.input`
   border: 2px solid ${corBorda};
   border-radius: 5px;
-  padding: 8px;
+  padding: 1.5rem 5rem;
   margin-bottom: 10px;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: ${corBorda};
-  margin: 8px;
 `;
 
 export const ErrorMessage = styled.div`

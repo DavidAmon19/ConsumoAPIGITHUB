@@ -12,7 +12,7 @@ const corLetra = '#27005D';
 export const SearchButton = styled.button`
   border-radius: 8px;
   border: 1px solid ${corPrincipal};
-  padding: 0.5em 1.2em;
+  padding: 1rem 5rem;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;

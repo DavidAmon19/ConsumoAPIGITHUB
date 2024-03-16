@@ -53,7 +53,7 @@ export const RepositoryPage = () => {
         <Title>Repositórios:</Title>
         <RepositoriesList>
           {repositories.map((repo) => (
-            <RepositoryCard key={repo.id} repo={repo} />
+            <RepositoryCard key={repo.id} repo={repo}  />
           ))}
         </RepositoriesList>
         <BackButton to="/">Voltar para Pesquisas</BackButton>

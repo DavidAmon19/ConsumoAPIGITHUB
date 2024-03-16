@@ -1,6 +1,13 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
+export const CardIcon = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+`;
+
 export const CardRepositorio = styled.div`
   width: 20rem;
   height: 8rem;
@@ -24,7 +31,6 @@ export const PageContainer = styled.div`
   flex-direction: column;
   align-items: center;
   color: #fff;
-  
 `;
 
 export const Avatar = styled.img`
@@ -46,8 +52,8 @@ export const RepositoriesList = styled.div`
   border-radius: 5px;
   width: 100%;
   height: 100%;
-  display:flex;
-  gap:1rem;
+  display: flex;
+  gap: 1rem;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
@@ -70,7 +76,7 @@ export const BackButton = styled(Link)`
   font-weight: bold;
   border-radius: 5px;
   transition: background-color 0.3s ease;
-  padding: 1rem;
+  padding: 1.5rem 5rem;
   margin-top: 5rem;
 
   &:hover {
