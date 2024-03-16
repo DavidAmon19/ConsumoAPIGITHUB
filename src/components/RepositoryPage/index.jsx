@@ -1,5 +1,3 @@
-// RepositoryPage.jsx
-// eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
@@ -49,20 +47,17 @@ export const RepositoryPage = () => {
   }, [username]);
 
   return (
-    <PageContainer>
-      {userAvatar && <Avatar src={userAvatar} alt="Avatar" />}
-      <Title>Repositórios:</Title>
-      <RepositoriesList>
-        {repositories.map((repo) => (
-          // eslint-disable-next-line react/jsx-key
-          <CardRepositorioSimple>
-            // eslint-disable-next-line react/jsx-no-comment-textnodes
-            <RepositoryCard key={repo.id} repo={repo} /> // Renderize o
-            componente RepositoryCard para cada item na lista de repositórios
-          </CardRepositorioSimple>
-        ))}
-      </RepositoriesList>
-      <BackButton to="/">Voltar para Pesquisas</BackButton>
-    </PageContainer>
+    <>
+      <PageContainer>
+        {userAvatar && <Avatar src={userAvatar} alt="Avatar" />}
+        <Title>Repositórios:</Title>
+        <RepositoriesList>
+          {repositories.map((repo) => (
+            <RepositoryCard key={repo.id} repo={repo} />
+          ))}
+        </RepositoriesList>
+        <BackButton to="/">Voltar para Pesquisas</BackButton>
+      </PageContainer>
+    </>
   );
 };

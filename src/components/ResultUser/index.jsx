@@ -1,8 +1,9 @@
 // Página do Usuário Localizado
 import React from "react";
-import { Card, Container, SearchButton } from "./styles";
+import { Card, Container, SearchButton, ItemsCard } from "./styles";
 import { useLocation, useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import "boxicons";
 
 export const ResultUser = () => {
   const { username } = useParams();
@@ -16,7 +17,6 @@ export const ResultUser = () => {
     }
   };
 
-
   return (
     <Container>
       {userData && (
@@ -24,9 +24,25 @@ export const ResultUser = () => {
           <Card>
             <img src={userData.avatar_url} alt="Avatar" />
             <h2>{userData.name}</h2>
-            <p>Cidade: {userData.location}</p>
-            <p>Seguidores: {userData.followers}</p>
-            <p>Seguindo: {userData.following}</p>
+            <ItemsCard>
+              <p>Cidade: {userData.location}</p>
+              <box-icon name="world"></box-icon>
+            </ItemsCard>
+
+            <ItemsCard>
+              <ItemsCard>
+                <p>
+                  Seguidores: {userData.followers}{" "}
+                  <box-icon name="check"></box-icon>
+                </p>
+              </ItemsCard>
+              <ItemsCard>
+                <p>
+                  Seguindo: {userData.following}{" "}
+                  <box-icon name="check-double"></box-icon>
+                </p>
+              </ItemsCard>
+            </ItemsCard>
           </Card>
           <SearchButton onClick={handleSeeRepositories}>
             Ver Repositórios

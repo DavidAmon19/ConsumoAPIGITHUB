@@ -2,28 +2,29 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const CardRepositorio = styled.div`
+  width: 20rem;
+  height: 8rem;
   display: flex;
   align-items: center;
-  gap: 4rem;
-  flex-wrap: wrap;
-  width: 50vw;
-  height: 50vh;
+  justify-content: center;
+  flex-direction: column;
+  border: 2px solid #ccc
+  margin: 0 auto;
 `;
 
 export const CardRepositorioSimple = styled.div`
-  background-color: #fff;
   display: flex;
   align-items: center;
-  gap: 1rem;
-  text-align: center;
+  justify-content: center;
+  background-color: #fff;
 `;
 
 export const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 12px;
   color: #fff;
+  
 `;
 
 export const Avatar = styled.img`
@@ -42,11 +43,14 @@ export const Title = styled.h1`
 `;
 
 export const RepositoriesList = styled.div`
-  padding: 15px;
   border-radius: 5px;
-  width: 80vw;
-  height: 70vh;
-
+  width: 100%;
+  height: 100%;
+  display:flex;
+  gap:1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   h2 {
     color: #352f44;
     font-size: 18px;
@@ -62,12 +66,12 @@ export const RepositoriesList = styled.div`
 export const BackButton = styled(Link)`
   background-color: #4f46e5;
   color: #fff;
-  padding: 10px 20px;
   text-decoration: none;
   font-weight: bold;
   border-radius: 5px;
-  margin-top: 10px;
   transition: background-color 0.3s ease;
+  padding: 1rem;
+  margin-top: 5rem;
 
   &:hover {
     background-color: #3c3480;

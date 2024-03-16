@@ -1,15 +1,16 @@
 import React from "react";
-import { Card } from 'react-bootstrap';
+import { Card } from "react-bootstrap";
+import { CardRepositorioSimple, CardRepositorio } from "./styles";
 
 const RepositoryCard = ({ repo }) => {
   return (
-    <Card>
-      <Card.Body>
-        <Card.Title>{repo.name}</Card.Title>
-        <Card.Text>{repo.description}</Card.Text>
+    <CardRepositorioSimple>
+      <CardRepositorio>
+        <h2>{repo.name}</h2>
+        <p>{repo.description}</p>
         <p>Estrelas: {repo.stargazers_count}</p>
-      </Card.Body>
-    </Card>
+      </CardRepositorio>
+    </CardRepositorioSimple>
   );
 };
 

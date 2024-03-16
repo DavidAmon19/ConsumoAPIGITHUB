@@ -46,18 +46,24 @@ export const GithubIcon = styled.img`
 
 
 export const Card = styled.div`
-  border: 2px solid ${corBorda};
-  border-radius: 5px;
-  padding: 20px; 
+  border: 4px solid ${corBorda};
+  border-radius: 10%;
+  padding: 10rem; 
   margin-top: 20px;
   background-color: ${corFundoCard};
   text-align: center;
-  width: 100%;
+  width: 30vw;
+  height: 70vh;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap:1rem;
 
   img {
     border-radius: 50%;
-    width: 220px;
-    height: 220px;
+    width: 320px;
+    height: 320px;
     border: 2px solid ${corBorda};
   }
 
@@ -90,3 +96,11 @@ export const Input = styled.input`
 
 
 
+export const ItemsCard = styled.div`
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  gap:0.2rem;
+  margin-bottom: 0.2rem;
+  `
+  ;
